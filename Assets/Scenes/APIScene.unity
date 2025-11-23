@@ -754,7 +754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VoiceAPIManager
   chatApiUrl: https://openrouter.ai/api/v1/chat/completions
-  apiKey: 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
+  apiKey: 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
 --- !u!4 &508099095
 Transform:
   m_ObjectHideFlags: 0
@@ -919,8 +919,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 084dbf9341d36fd4db9dfa21081c1cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FixArabic3DText
-  showTashkeel: 1
-  useHinduNumbers: 1
 --- !u!1 &1116970717
 GameObject:
   m_ObjectHideFlags: 0

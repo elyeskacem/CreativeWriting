@@ -8,6 +8,10 @@ public class VoiceAPIManager : MonoBehaviour
     public string chatApiUrl = "https://openrouter.ai/api/v1/chat/completions";
     public string apiKey = "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";
 
+    [Header("Audio Configuration")]
+    public AudioSource audioSource;
+    public AudioClip receivingMessageSound;
+
     public void SendMessageToAI(string userMessage)
     {
         StartCoroutine(SendChatRequest(userMessage));
@@ -34,6 +38,9 @@ public class VoiceAPIManager : MonoBehaviour
             request.downloadHandler = new DownloadHandlerBuffer();
             request.SetRequestHeader("Content-Type", "application/json");
             request.SetRequestHeader("Authorization", "Bearer " + apiKey);
+
+            // Play sound once when request begins
+            PlayReceivingSound();
 
             yield return request.SendWebRequest();
 
@@ -66,6 +73,17 @@ public class VoiceAPIManager : MonoBehaviour
                     chatUI.DisplayAIResponse("Sorry, I'm having connection issues.");
                 }
             }
+        }
+    }
+    void PlayReceivingSound()
+    {
+        if (audioSource != null && receivingMessageSound != null)
+        {
+            audioSource.PlayOneShot(receivingMessageSound);
+        }
+        else
+        {
+            Debug.LogWarning("AudioSource or AudioClip not assigned!");
         }
     }
 }
