@@ -6,7 +6,7 @@ public class VoiceAPIManager : MonoBehaviour
 {
     [Header("API Configuration")]
     public string chatApiUrl = "https://openrouter.ai/api/v1/chat/completions";
-    public string apiKey = "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";
+    public string apiKey = "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";
 
     public void SendMessageToAI(string userMessage)
     {
