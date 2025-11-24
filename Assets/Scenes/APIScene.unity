@@ -755,6 +755,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::VoiceAPIManager
   chatApiUrl: https://openrouter.ai/api/v1/chat/completions
   apiKey: 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
+  audioSource: {fileID: 0}
+  receivingMessageSound: {fileID: 0}
 --- !u!4 &508099095
 Transform:
   m_ObjectHideFlags: 0
@@ -1823,7 +1825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChatUI
   messageInput: {fileID: 1338221230}
-  chatDisplay: {fileID: 157808853}
+  chatDisplay: {fileID: 0}
   sendButton: {fileID: 210582712}
   typingIndicator: {fileID: 231264474}
 --- !u!114 &2008518940
