@@ -6,7 +6,7 @@ public class ChatUI : MonoBehaviour
 {
     [Header("UI References")]
     public TMP_InputField messageInput;
-    public TextMeshProUGUI chatDisplay;
+    public Text chatDisplay;
     public Button sendButton;
     public GameObject typingIndicator;
 
